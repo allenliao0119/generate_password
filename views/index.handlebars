@@ -67,6 +67,11 @@
                 <small class="text-muted form-text">These characters will not appear in the password</small>
               </div>
             </div>
+            {{#if password}}
+            <div class="alert alert-primary" role="alert">
+              The ramdon password is {{password}}
+            </div>
+            {{/if}}
             <button class="btn btn-success" type="submit">Generate Password</button>
           </form>
         </div>
