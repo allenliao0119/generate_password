@@ -40,6 +40,11 @@ function generatePassword(options) {
       charactor => !options.excludeCharacters.includes(charactor))
   }
 
+  // return error notice if collection is empty
+  if (collection.length === 0) {
+    return 'There is no valid charactor in your selection.'
+  }
+
   // draw charactor from collection ramdonly to generate password
   let password = ''
   for(let i = 0; i < options.length; i++) {
