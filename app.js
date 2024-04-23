@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const options = req.body
   const password = generatePassword(options)
-  res.render('index', {password})
+  res.render('index', {password, options})
 })
 
 // start and listen the server
